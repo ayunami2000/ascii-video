@@ -92,12 +92,14 @@
     }
 
     var cameraOptions = {
-      video: true
+      video: true,
+      audio: false
     };
 
     // Start getting media stream from camera.
     navigator.getUserMedia(cameraOptions, function (stream) {
-      $video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
+      //$video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
+      $video.srcObject = stream;
       startDrawingASCIIVideo();
     }, function (error) {
       console.log(error);
