@@ -92,8 +92,7 @@
     }
 
     var cameraOptions = {
-      video: true,
-      audio: false
+      video: true
     };
 
     // Start getting media stream from camera.
